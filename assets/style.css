@@ -1,0 +1,139 @@
+/* CSS Variables */
+:root {
+  --dark-purple: #6D28D9;
+  --white: #ffffff;
+  --black: #000000;
+  --dark-gray: #333333;
+  --gray: #666666;
+  --light-gray: #999999;
+  --lighter-gray: #cccccc;
+  --module-width: 320px;
+  --font: 'Roboto', sans-serif;
+}
+
+/* Base Styles */
+body {
+  background: #e9e9e9;
+  color: var(--gray);
+  font-family: var(--font);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pen-title {
+  padding: 50px 0;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.pen-title h1 {
+  margin: 0 0 20px;
+  font-size: 48px;
+  font-weight: 300;
+}
+.pen-title span {
+  font-size: 12px;
+}
+.pen-title .fa {
+  color: var(--dark-purple);
+}
+.pen-title a {
+  color: var(--dark-purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Form Module */
+.form-module {
+  background: var(--white);
+  max-width: var(--module-width);
+  width: 100%;
+  margin: 0 auto;
+  border-top: 5px solid var(--dark-purple);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.toggle {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--dark-purple);
+  width: 30px;
+  height: 30px;
+  color: var(--white);
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+}
+.tooltip {
+  position: absolute;
+  top: 5px;
+  right: -65px;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  padding: 5px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid rgba(0, 0, 0, 0.6);
+}
+
+.form {
+  display: none;
+  padding: 40px;
+}
+.form.active {
+  display: block;
+}
+.form h2 {
+  margin: 0 0 20px;
+  color: var(--dark-purple);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.form input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+.form input:focus {
+  border-color: var(--dark-purple);
+  color: var(--dark-gray);
+}
+
+.form button {
+  cursor: pointer;
+  background: var(--dark-purple);
+  border: none;
+  width: 100%;
+  padding: 10px 15px;
+  color: var(--white);
+  transition: background 0.3s ease;
+}
+.form button:hover {
+  background: #2393c9;
+}
+
+.cta {
+  background: #f7f7f7;
+  text-align: center;
+  padding: 15px 40px;
+  font-size: 12px;
+}
+.cta a {
+  color: var(--dark-gray);
+  text-decoration: none;
+}
